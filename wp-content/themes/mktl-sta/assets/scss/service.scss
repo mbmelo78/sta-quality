@@ -1,0 +1,139 @@
+/*--------------------------------------------------------------
+Service Style
+----------------------------------------------------------------
+# Service Grid
+# Service Carousel
+--------------------------------------------------------------*/
+.pxl-service-style1 {
+	.pxl-post--icon {
+        line-height: 1;
+        font-size: 50px;
+        @include background-gradient-left( $secondary_color,$primary_color);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-color: initial;
+        margin-bottom: 24px;
+        text-shadow: 0 4px 7px rgba(213, 170, 109, .48);
+	}
+	.pxl-post--featured {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #191514;
+		transition: all 400ms;
+		opacity: 0;
+		transform: translateY(100%);
+        &:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .98)), to(transparent));
+            background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .98), transparent);
+            background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, .98), transparent);
+            background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, .98), transparent);
+            background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .98), transparent);
+            background-image: linear-gradient(bottom, rgba(0, 0, 0, .98), transparent);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(0, 0, 0, 0.98)',endColorStr='rgba(0, 0, 0, 0)');
+        }
+	}
+	.pxl-post--title {
+		margin-bottom: 0;
+		font-size: 20px;
+		margin-bottom: 15px;
+    	letter-spacing: .025em;
+		color: #191514;
+	}
+	.pxl-post--content{
+		font-size: 14px;
+		line-height: 24px;
+		color: #666666;
+	}
+	.pxl-post--readmore {
+		font-size: 16px;
+		width: 100%;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 46%;
+		left: 50%;
+	}
+	.pxl-post--inner {
+		position: relative;
+		margin: 0 15px;
+		overflow: hidden;
+		.pxl-post--holder{
+			position: relative;
+			text-align: center;
+			border: 2px dashed #cacaca;
+			padding: 41px 45px 43px;
+		}
+		&:hover {
+			.pxl-post--featured{
+				opacity: 1;
+				transform: translateY(0%);
+			}
+			.pxl-post--title {
+				color: #000;
+			}
+		}
+		.btn-readmore-1{
+			position: absolute;
+			font-family: poppins, sans-serif;
+			border: none;
+			color: #fff;
+			font-size: 14px;
+			font-weight: 600;
+			z-index: 1;
+			transform: translate(-50%, 0);
+			padding: 0 34px;
+			line-height: 62px;
+			letter-spacing: .01em;
+			transition: all 300ms linear 0ms;
+			
+			&::before,&::after{
+				content: " ";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 4px;
+				z-index: -1;
+				transition: all 300ms linear 0ms;
+			}
+			&::after{
+				border-radius: 50px;
+				box-shadow: 0 4px 7px rgba(213, 170, 109, .47);
+				@include background-gradient-left($secondary_color,$primary_color);
+				opacity: 0;
+			}
+			&::before{
+				border-radius: 50px;
+				box-shadow: 0 4px 7px rgba(213, 170, 109, .47);
+				@include background-gradient-left($primary_color, $secondary_color);
+			}
+
+
+			&:hover{
+				&::before{
+					opacity: 0;
+				}
+				&::after{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&.pxl-service-grid-layout1 {
+		.pxl-post--inner {
+			padding-bottom: 48px;
+		}
+	}
+}
+
+body.rtl {
+}

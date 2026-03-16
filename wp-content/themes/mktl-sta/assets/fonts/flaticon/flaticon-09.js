@@ -1,0 +1,24 @@
+{
+    "icons": [
+	    "menu",
+		"magnifying-glass",
+		"courthouse",
+		"handcuffs",
+		"gun",
+		"legal-paper",
+		"open-book",
+		"case",
+		"real-estate",
+		"placeholder",
+		"chat",
+		"phone-call",
+		"fingerprint",
+		"shield",
+		"on-time-support",
+		"monthly-calendar",
+		"link-symbol",
+		"briefcase",
+		"teamwork",
+		"multiple-users-silhouette"
+	]
+}

@@ -1,0 +1,47 @@
+/* 1) Foco visível (não confies no tema) */
+:focus { outline: none; }
+:focus-visible { outline: 3px solid #111; outline-offset: 3px; }
+
+/* Menu PXL */
+.pxl-menu-primary a:focus,
+.pxl-menu-primary a:focus-visible{
+  outline: 3px solid #111 !important;
+  outline-offset: 3px !important;
+}
+
+/* Abre submenu quando o li está “aberto por teclado” */
+.pxl-menu-primary li.kb-open > ul.sub-menu{
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  max-height: none !important;
+  height: auto !important;
+  clip-path: none !important;
+}
+
+/* SR-only utilitário */
+.sr-only{
+  position:absolute!important;
+  width:1px!important; height:1px!important;
+  padding:0!important; margin:-1px!important;
+  overflow:hidden!important; clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important; border:0!important;
+}
+
+/* Skip link visível quando focado */
+.a11y-skip-link{
+  position:fixed;
+  top:10px; left:10px;
+  padding:10px 12px;
+  background:#fff;
+  /*border:2px solid #111;*/
+  border-radius:10px;
+  transform:translateY(-150%);
+  z-index:999999;
+}
+.a11y-skip-link:focus,
+.a11y-skip-link:focus-visible{
+  transform:translateY(0);
+}

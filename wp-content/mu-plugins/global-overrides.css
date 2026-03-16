@@ -1,0 +1,395 @@
+.eae-tl-item-image img{
+  background-color:transparent !important;
+  border: none !important;
+}
+
+.image-position-row .eae-tl-item-image{width:200px!important;height:260px!important;overflow:hidden!important;display:flex;align-items:center;justify-content:center;}
+
+/* Imagem adapta-se sem distorção */
+.image-position-row .eae-tl-item-image img{width:100%!important;height:100%!important;object-fit:contain!important;}
+
+/* Mobile */
+@media (max-width:768px){
+    .eae-tl-item-image{
+        display:none!important;
+    }
+}
+
+/* Texto apenas para leitores de ecrã */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+
+.elementor-button .elementor-button-content-wrapper{display:inline-flex;align-items:center;gap:8px;}
+
+/* Acessibilidade */
+/* Menu do tema PXL */
+.pxl-menu-primary a:focus,
+.pxl-menu-primary a:focus-visible{outline:3px solid #111!important;outline-offset:3px!important;}
+
+/* opcional: realce de fundo para ficar mesmo óbvio */
+.pxl-menu-primary a:focus-visible .pxl-menu-item-text{box-shadow:0 0 0 3px rgba(0,0,0,.25)!important;border-radius:6px;}
+
+/* Abre dropdown quando o li contém foco */
+.pxl-menu-primary li.menu-item-has-children:focus-within>ul.sub-menu,
+.pxl-menu-primary li.kb-open>ul.sub-menu{display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;transform:none!important;max-height:none!important;height:auto!important;}
+
+.tribe-events-c-top-bar__datepicker{display:none!important;}
+
+.elementor-slideshow__footer .elementor-slideshow__title{color:transparent!important;}
+
+.tribe-events-promo .tribe-common-b1 .tribe-events-c-promo{
+  display:none !important;
+}
+
+/* Caixa com altura uniforme (16:9). Troca para 4/3 ou 1/1 se preferires */
+.pxl-post--featured { 
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+/* A imagem ocupa a caixa e é “cropada” para caber */
+.pxl-post--featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.elementor .elementor-element.elementor-widget-n-tabs:not(:has(>.elementor-widget-container))>.e-n-tabs>.e-n-tabs-heading .e-n-tab-title[aria-selected=true], .elementor .elementor-element.elementor-widget-n-tabs:not(:has(>.elementor-widget-container))>.e-n-tabs[data-touch-mode=true]>.e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover, .elementor .elementor-element.elementor-widget-n-tabs>.elementor-widget-container>.e-n-tabs>.e-n-tabs-heading .e-n-tab-title[aria-selected=true], .elementor .elementor-element.elementor-widget-n-tabs>.elementor-widget-container>.e-n-tabs[data-touch-mode=true]>.e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover {
+    background-color: #4A8FC2;
+    background-image: none;
+}
+
+.elementor .elementor-element.elementor-widget-n-tabs:not(:has(>.elementor-widget-container))>.e-n-tabs[data-touch-mode=false]>.e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover, .elementor .elementor-element.elementor-widget-n-tabs>.elementor-widget-container>.e-n-tabs[data-touch-mode=false]>.e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover {
+    background-color: #4A8FC2;
+    background-image: none;
+}
+
+ul {
+     padding-left: 20px;
+}
+:is(dir, menu, ol, ul) ul {
+    padding-left: 20px;
+}
+
+.btnEvents{
+  background: #236093 !important;
+  color: #fff !important;
+  padding: 10px 15px !important;
+  text-decoration: none !important;
+}
+
+.btnEvents:hover{
+  background: #4A8FC2 !important;
+  color: #fff !important;
+}
+
+
+/* Lista */
+.sta-events-list { display: grid; gap: 16px; }
+
+/* Linha do evento */
+.sta-event-row {
+  display: flex; gap: 16px; align-items: center;
+  padding: 0; border-bottom: 1px solid #eee;
+}
+
+/* Media (quadrado) */
+.sta-event-media {
+  width: var(--sta-dim, 150px);
+  min-width: var(--sta-dim, 150px);
+  height: var(--sta-dim, 150px);
+  overflow: hidden; display: block; background: #f2f4f7;
+}
+.sta-event-media img { width:100%; height:100%; object-fit: cover; display:block; }
+.sta-event-ph {
+  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+  color:#98a2b3; font-size:.8rem; border:1px dashed #d0d5dd;
+}
+
+/* Corpo */
+.sta-event-body {
+  flex: 1;
+}
+.sta-event-title {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+.sta-event-title a { text-decoration: none; }
+.sta-event-meta { color:#555; font-size:.92rem; margin-bottom: 10px; }
+
+/* Botão */
+.btnEvents {
+  display:inline-block;
+  padding:8px 12px;
+  text-decoration:none;
+  line-height:1;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .sta-event-row { align-items: flex-start; }
+  .sta-event-media { width:90px; min-width:90px; height:90px; }
+}
+
+
+/* Grid */
+.sta-cards {
+  --gap: 18px;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(var(--sta-cols,3), minmax(0, 1fr));
+}
+
+/* Cartão */
+.sta-card {
+  position: relative;
+  background: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 18px 18px 16px 18px;
+  box-shadow: 0 1px 0 rgba(16,24,40,.04);
+  min-height: 160px;
+}
+
+/* Selo de data */
+.sta-date-badge {
+  position: absolute;
+  left: 14px; top: -12px;
+  width: 86px;
+  background: #236093;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(16,24,40,.08);
+  overflow: hidden;
+}
+.sta-date-badge .sta-month { font-size: 12px; line-height: 1; padding: 8px 0 6px; text-transform: lowercase; opacity: .95; }
+.sta-date-badge .sta-day   { font-size: 28px; font-weight: 700; line-height: 1; padding: 6px 0 10px; }
+
+/* Corpo */
+.sta-card-body { padding-top: 8px; }
+.sta-title { margin: 0px 0 10px 100px; font-size: 1.05rem; }
+.sta-title a { text-decoration: none; }
+.sta-when { color:#475467; font-size:.95rem; margin-bottom: 6px; }
+.sta-cat { font-weight:700; margin: 4px 0 6px; }
+.sta-excerpt { color:#344054; font-size:.95rem; line-height:1.45; margin: 4px 0 10px; }
+
+/* Botão */
+.sta-btn {
+  display:inline-block; padding:7px 12px;
+  border-radius:6px; text-decoration:none; font-size:.92rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) { .sta-cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px)  { .sta-cards { grid-template-columns: 1fr; } }
+
+
+
+.gtranslate_wrapper a{
+  color: #ffffff !important; 
+  top: 10px !important; 
+  right: 30px !important; 
+}
+
+.gtranslate_wrapper .gt_switcher_wrapper{
+  top: 5px !important; 
+  right: 50px !important; 
+}
+
+
+.pxl-scroll-progress-circle path{
+  transition: none !important;
+  will-change: stroke-dashoffset;
+}
+
+
+/* 1) garantir que o container que agrupa os 3 cards estica os filhos */
+.accordion-modal{
+  height: 100%;
+}
+
+/* 2) garantir que cada "card" (coluna) se comporta como coluna flex e ocupa a altura */
+.accordion-modal,
+.accordion-modal .e-con-inner,
+.accordion-modal .elementor-widget-wrap{
+  height: 100%;
+}
+
+/* 3) o importante: o container do card tem de ser flex column e o acordeão vai para o fundo */
+.accordion-modal{
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-modal .pxl-accordion{
+  margin-top: auto;
+}
+
+.elementor-widget-button .elementor-button{
+    /*min-height: 90px;*/
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.elementor-button-text{
+    display:block;
+    /*max-width:160px;*/
+    margin:auto;
+}
+
+/* ===== GRID DE EVENTOS ===== */
+
+#eventos-home .sta-events-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+
+/* ===== CARD ===== */
+
+#eventos-home .sta-event-row{
+  display:flex;
+  flex-direction:column;
+  background:rgba(255,255,255,.75);
+  border:1px solid rgba(0,0,0,.08);
+  overflow:hidden;
+}
+
+
+/* ===== IMAGEM DO EVENTO ===== */
+
+#eventos-home .sta-event-media{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+}
+
+#eventos-home .sta-event-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+
+/* ===== CORPO ===== */
+
+#eventos-home .sta-event-body{
+  display:flex;
+  flex-direction:column;
+  padding:14px 16px 16px;
+  gap:10px;
+  min-height:150px;
+}
+
+
+/* DATA */
+
+#eventos-home .sta-event-meta{
+  font-weight:600;
+  opacity:.85;
+  font-size:14px;
+}
+
+
+/* TÍTULO */
+
+#eventos-home .sta-event-title{
+  margin:0;
+  font-size:18px;
+  line-height:1.2;
+}
+
+#eventos-home .sta-event-title a{
+  text-decoration:none;
+}
+
+#eventos-home .sta-event-title a:hover{
+  text-decoration:underline;
+}
+
+
+/* BOTÃO */
+
+#eventos-home .sta-event-cta{
+  margin-top:auto;
+  align-self:flex-end;
+
+  padding:8px 16px;
+
+  background:#236093;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
+
+#eventos-home .sta-event-cta:hover{
+  background:#4A8FC2;
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width:1024px){
+
+  #eventos-home .sta-events-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media (max-width:640px){
+
+  #eventos-home .sta-events-list{
+    grid-template-columns:1fr;
+  }
+
+}
+
+.elementor-button {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #4A7FC2 50%, #236093 100%);
+    border-radius: 0px 0px 0px 0px;
+} 
+
+.elementor-button:hover, .elementor-button:focus {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #236093 50%, #4A8FC2 100%);
+}
+
+.pxl-accordion1.style-default .pxl-accordion--title {
+    padding: 10px 20px;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #4A7FC2 50%, #236093 100%);
+    border-radius: 0px 0px 0px 0px;
+}
+
+.pxl-accordion1.style-default .pxl-title--text {
+  color: #FFFFFF;
+}
+
+.pxl-accordion1.style-default .pxl-icon--action {
+    position: absolute;
+    right: 20px;
+    top: 52%;
+    transform: translate(0, -50%);
+     color: #FFFFFF;
+}
+
+.pxl-accordion1.style-default .pxl-accordion--title:hover {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #236093 50%, #4A8FC2 100%);
+}
+
+.elementor-401 .elementor-element.elementor-element-e6dae00 .elementor-pagination {
+    margin-top: 20px;
+}
+
